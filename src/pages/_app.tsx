@@ -1,16 +1,13 @@
-import { ThemeProvider, CSSReset, ColorModeProvider } from '@chakra-ui/core'
+import { CSSReset, ThemeProvider } from "@chakra-ui/core";
+import theme from "../theme";
 
-import theme from '../theme'
-
-function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps }: any ) {
   return (
     <ThemeProvider theme={theme}>
-      <ColorModeProvider>
-        <CSSReset />
-        <Component {...pageProps} />
-      </ColorModeProvider>
-    </ThemeProvider>
-  )
+      <CSSReset />
+      <Component {...pageProps} />
+      </ThemeProvider>
+    );
 }
 
-export default MyApp
+export default MyApp;
